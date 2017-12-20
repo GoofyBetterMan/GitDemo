@@ -9,22 +9,31 @@
 #import "ViewController.h"
 #import "GameScene.h"
 
+@interface ViewController ()
+@property (nonatomic) int sum;
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+     
+     int a=5;
+     int b=10;
+     self.sum=a+b;
+     NSLog(@"The result is:%d",self.sum);
     // Load the SKScene from 'GameScene.sks'
-    GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
+   // GameScene *scene = (GameScene *)[SKScene nodeWithFileNamed:@"GameScene"];
     
     // Set the scale mode to scale to fit the window
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    //scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene
-    [self.skView presentScene:scene];
+    //[self.skView presentScene:scene];
     
-    self.skView.showsFPS = YES;
-    self.skView.showsNodeCount = YES;
+    //self.skView.showsFPS = YES;
+    //self.skView.showsNodeCount = YES;
 }
 
 @end
